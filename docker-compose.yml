@@ -1,0 +1,39 @@
+version: '3.7'
+
+services:
+    nginx:
+        container_name: default-nginx
+        image: nginx:latest
+        ports:
+            - "8000:80"
+            - "8001:443"
+        volumes:
+            - ./hosts:/etc/nginx/conf.d
+            - ./www:/var/www
+            - ./logs:/var/log/nginx
+        depends_on:
+            - php
+        links:
+            - php
+    php:
+        container_name: default-php
+        build:
+            context: .
+            dockerfile: ./images/php/php
+        links:
+            - mysql
+        volumes:
+            - ./www:/var/www
+    mysql:
+        container_name: default-mysql
+        image: mysql:latest
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        ports:
+            - 9514:3306
+        environment:
+            MYSQL_ROOT_PASSWORD: secret
+        volumes:
+            - mysql:/var/lib/mysql
+volumes:
+    mysql:

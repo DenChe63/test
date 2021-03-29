@@ -1,0 +1,13 @@
+2021/03/23 10:54:10 [error] 22#22: *4 open() "/var/www/test.dev/requested.html" failed (2: No such file or directory), client: 10.20.0.25, server: test.dev, request: "GET /requested.html HTTP/1.1", host: "0.0.0.0"
+2021/03/23 12:35:09 [error] 22#22: *10 open() "/var/www/test.dev/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: test.dev, request: "GET /favicon.ico HTTP/1.1", host: "test.dev:8000", referrer: "http://test.dev:8000/"
+2021/03/24 17:50:47 [error] 22#22: *1 open() "/var/www/test.dev/favicon.ico" failed (2: No such file or directory), client: 172.21.0.1, server: test.dev, request: "GET /favicon.ico HTTP/1.1", host: "test.dev:8000", referrer: "http://test.dev:8000/"
+2021/03/25 13:56:32 [emerg] 1#1: unknown directive "do" in /etc/nginx/conf.d/test-def.conf:12
+2021/03/25 14:06:20 [error] 22#22: *7 open() "/var/www/test.dev/fsdf" failed (2: No such file or directory), client: 172.21.0.1, server: test.dev, request: "GET /fsdf HTTP/1.1", host: "test.dev:8000"
+2021/03/25 14:06:25 [error] 22#22: *7 open() "/var/www/test.dev/news" failed (2: No such file or directory), client: 172.21.0.1, server: test.dev, request: "GET /news HTTP/1.1", host: "test.dev:8000"
+2021/03/25 14:06:56 [error] 22#22: *7 open() "/var/www/test.dev/news" failed (2: No such file or directory), client: 172.21.0.1, server: test.dev, request: "GET /news HTTP/1.1", host: "test.dev:8000"
+2021/03/25 14:19:16 [emerg] 1#1: open() "/etc/nginx/snippets/fastcgi-php.conf" failed (2: No such file or directory) in /etc/nginx/conf.d/test-def.conf:13
+2021/03/25 14:20:16 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/conf.d/test-def.conf:21
+2021/03/25 14:22:05 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/conf.d/test-def.conf:20
+2021/03/25 14:25:44 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/conf.d/test-def.conf:20
+2021/03/25 14:31:49 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/conf.d/test-def.conf:20
+2021/03/25 14:32:30 [emerg] 1#1: "location" directive is not allowed here in /etc/nginx/conf.d/test-def.conf:20
