@@ -24,6 +24,14 @@ services:
             - mysql
         volumes:
             - ./www:/var/www
+    php-cli:
+        container_name: default-php-cli
+        build:
+            context: .
+            dockerfile: ./images/php/php
+        volumes:
+            - ./www:/var/www
+        command: sleep 10000
     mysql:
         container_name: default-mysql
         image: mysql:latest
